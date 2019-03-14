@@ -121,7 +121,7 @@ namespace HallsByra.BezierSpiral
             public PointOnSpiral P3 { get; private set; }
 
             // Creates a BezierSpiralSegment between two points on the spiral.
-            // Placement of control points is based on https://stackoverflow.com/a/27863181/1345815
+            // Placement of control points is based on https://stackoverflow.com/a/27863181
             public static BezierSpiralSegment ForSpiralSegment(PointOnSpiral p0, PointOnSpiral p3)
             {
                 var cpOffset = 4 * Math.Tan((p3.Angle - p0.Angle) / 4) / 3;

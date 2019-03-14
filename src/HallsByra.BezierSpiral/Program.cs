@@ -14,7 +14,7 @@ namespace HallsByra.BezierSpiral
             var curves = BezierSpiral.Generate(
                 center: new Point(0, 0),
                 startAngle: 0,
-                endAngle:  Math.PI * 2 * 5,
+                endAngle:  Math.PI * 2 * 5 - Math.PI/4,
                 angleStep: Math.PI / 2,
                 turnSeparation: 1);
 
@@ -29,7 +29,7 @@ namespace HallsByra.BezierSpiral
 
             var html = $@"
 <body>
-    <svg width=""500"" height=""500"" viewBox=""-6 -6 12 12"" xmlns=""http://www.w3.org/2000/svg"">
+    <svg width=""500"" height=""500"" viewBox=""-5 -5 10 10"" xmlns=""http://www.w3.org/2000/svg"">
         {curveSvgs}
         {lineSvgs}
         {pointSvgs}

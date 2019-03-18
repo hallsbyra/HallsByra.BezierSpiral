@@ -80,8 +80,8 @@ namespace HallsByra.BezierSpiral
 
         private static Point Transpose(Point src, Point center, double turnSeparation) =>
             new Point(
-                x: (src.X + center.X) * turnSeparation / (2 * Math.PI),
-                y: (src.Y + center.Y) * turnSeparation / (2 * Math.PI));
+                x: src.X * turnSeparation / (2 * Math.PI) + center.X,
+                y: src.Y * turnSeparation / (2 * Math.PI) + center.Y);
 
         static Point TangentVectorAt(double theta) =>
             new Point(
